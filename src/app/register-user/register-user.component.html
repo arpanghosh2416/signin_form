@@ -1,0 +1,142 @@
+<div class="container col-md-6">
+    <h1 style="color:red">User Register Form</h1>
+    <form [formGroup]="UserSignIn" (ngSubmit)="user()" class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6 position-relative">
+            <label for="validationSuccess" class="form-label">First Name</label>
+           <input type="text" class="form-control" formControlName="fname" id="validationServer02" placeholder="First name" aria-label="First name" required>
+          <div class="text-danger" *ngIf="fname.errors!=null && (fname.touched || fname.dirty || errormessage)" >
+            First Name cannot be empty.
+          </div>
+          <div class="text-danger" *ngIf="fname.errors==null" >
+            Looks Good!
+          </div>
+        </div>
+            
+            <div class="col-md-6">
+                <label for="validationServer02" class="form-label">Last Name</label>
+              <input type="text" class="form-control" formControlName="lname" id="validationServer02" placeholder="Last name" aria-label="Last name" required>
+              <div *ngIf="lname.errors!=null && (lname.touched || lname.dirty || errormessage)" class="text-danger">
+                Last Name cannot be empty.
+              </div>
+              <div class="valid-feedback" *ngIf="lname.errors==null">
+                Looks good!
+              </div>
+            </div>
+           
+            <div class="row-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Email" id="inputEmail4">
+              </div>
+              <div class="row-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="Password" id="inputPassword4">
+              </div>
+              <div class="row-md-6">
+                <label for="inputPassword4" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Confirm Password" id="inputPassword4">
+              </div>
+              
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address 1</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                  <option selected>None</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Patna</option>
+                  <option>Chhattisgarh</option>
+                  <option>Goa</option>
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Manipur</option>
+                  <option>Meghalaya</option>
+                  <option>Mizoram</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Tripura</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>West Bengal</option>
+                </select>
+              </div>
+             
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+              
+              <div class=" col-md-4">
+                <label for="dateselect" class="form-label">Date of Birth: </label>
+                <input type="date" class="form-control">
+              </div>
+              
+        <div class="mb-3">
+            <label for="inputGender" class="form-label">Gender</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                <label class="form-check-label" for="exampleRadios1">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  Female
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                 Others
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+                <label class="form-check-label" for="exampleRadios2">
+                  Prefer Not to Say
+                </label>
+              </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Remember Me
+                  </label>
+                </div>
+              </div>
+            
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </div>
+              
+          </div>
+          
+    </form>
+</div>
